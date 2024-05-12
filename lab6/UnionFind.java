@@ -1,16 +1,17 @@
 public class UnionFind {
-
-    // TODO - Add instance variables?
+    private int[] root;
 
     /* Creates a UnionFind data structure holding n vertices. Initially, all
        vertices are in disjoint sets. */
     public UnionFind(int n) {
-        // TODO
+        root = new int[n];
+        for(int i = 0; i < n; ++i) root[i] = -1;
     }
 
     /* Throws an exception if v1 is not a valid index. */
-    private void validate(int vertex) {
-        // TODO
+    private void validate(int v1) {
+        if(v1 < 0 || v1 >= root.length)
+            throw new RuntimeException("Invalid index");
     }
 
     /* Returns the size of the set v1 belongs to. */
