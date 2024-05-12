@@ -4,6 +4,6 @@ public class UnionFindTest {
     @Test
     public void InvalidIndex(){
         UnionFind uf1 = new UnionFind(10);
-        Assert.assertEquals("Invalid index", uf1.);
+        Assert.assertEquals("Invalid index", uf1.find(11));
     }
 }
